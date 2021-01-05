@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'users/login.css' %}">
+    <script src="form.js">
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="bg-img">
+        <header class="he">Welcome to crichub</header>
+        <div class="content">
+            <header>Register</header>
+            <form method="POST" action="{% url 'register'%}">
+                {% csrf_token %}
+                <div class="field">
+                    <span class=" fa fa-user"></span>
+                    <input type="text" placeholder="Username" id="username" name="username">
+                </div><br>
+                <div class="field">
+                    <span class="fas fa-envelope-open"></span>
+                    <input type="email" placeholder="email" id="email" name="email"></div><br>
+                
+                <div class="field">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" placeholder="password" id="password1" name="password1"></div><br>
+
+                <div class="field">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" placeholder="confirm-password" id="password2" name="password2"></div>
+                <div class="pass">
+                    <div class="field space">
+                        <input type="submit" value="Register">
+                    </div>
+            </form><br>
+            <div class="He">
+                <p class="hello" >Already Register? <a href="{% url 'login'%}" style="color:#54ebe3;">Login here</a></p>
+            </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

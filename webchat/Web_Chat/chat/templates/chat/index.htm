@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'chat/index.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Django Webchat</h1>
+        <div class="chat-section">
+            <div class="users">
+
+                {% for user in users%} {% if user != request.user %}
+                <a href="{% url 'chat-page' user.id %}" class="user">
+                    <img src="{{ user.profile.image.url}}" alt="">
+                    <div class="user-moinfo">
+                        <p class="user-name">{{ user.username}}</p>
+                        <h6 class="last-msg-tm">10:10 PM</h6>
+                        <p class="last-msg">
+                            कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । मा कर्मफलहेतुर्भुर्मा ते संगोऽस्त्वकर्मणि ॥</p>
+                    </div>
+                </a>
+                {% endif %} {% endfor %}
+
+            </div>
+            <div class="msgs-div">
+                <h1>Welcome To the Django Webchat</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    .msgs-div {
+        background: url('https://wallpapercave.com/wp/wp4410716.jpg');
+        background-color: #3a3939;
+        background-blend-mode: multiply;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: darkgray;
+    }
+</style>
+
+</html>

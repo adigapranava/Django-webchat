@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-img {
+    background: url("https://wallpapercave.com/wp/wp4410714.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+.he {
+    font-size: large;
+}
+
+.bg-img:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: "";
+    width: 100%;
+    background: rgba(0, 0, 0, 0.212);
+}
+
+.content {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 370px;
+    text-align: center;
+    z-index: 999;
+    padding: 60px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgb(0, 0, 0);
+}
+
+.content header {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin: 0 0 35px 0;
+}
+
+.field {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 5px;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+.field span {
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+
+.space {
+    margin-top: 16px;
+}
+
+input[type="submit"] {
+    background-color: hsl(180deg 27% 46%);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+    color: rgb(211, 112, 117);
+    font-size: 20px;
+    margin: 10px;
+}
+
+.hello {
+    color: rgb(173, 173, 173);
+}
