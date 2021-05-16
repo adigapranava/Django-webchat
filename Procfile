@@ -1,1 +1,1 @@
-web: gunicorn web_chat-project.wsgi
+web: gunicorn web_chat.wsgi
