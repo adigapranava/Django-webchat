@@ -26,7 +26,7 @@ SECRET_KEY = '%bnhc$y)gk2nq%1o_dov3-t$tm!!r==qs$@ryijz3xgr7gmrly'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-webchat.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -121,6 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if DEBUG: 
+   STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+else:
+   STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
