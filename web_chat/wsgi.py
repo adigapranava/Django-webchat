@@ -13,9 +13,4 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web_chat.settings')
 
-# application = get_wsgi_application()
-
-# add the below lines and commented the top one
-from whitenoise.django import DjangoWhiteNoise
 application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
