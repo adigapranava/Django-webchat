@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#just a comment
+#just a comment2    
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
