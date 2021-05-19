@@ -3,7 +3,7 @@ var messages;
 const msgs_div = document.getElementById('msgs');
 
 function check() {
-    var url = "http://127.0.0.1:8000/chat/latest_msgs/" + chatwith;
+    var url = window.origin + "/chat/latest_msgs/" + chatwith;
     $.get(url, function(data, status) {
         if (data) {
             msgs = data;
@@ -54,7 +54,7 @@ function display(msgs) {
 
 
 function onPageLoad() {
-    var url = "http://127.0.0.1:8000/chat/msgs/" + chatwith;
+    var url = window.origin + "/chat/msgs/" + chatwith;
     $.get(url, function(data, status) {
         if (data) {
             messages = data;
